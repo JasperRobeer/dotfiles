@@ -14,6 +14,7 @@ foreground = #000
 foreground-alt = #f0f0f0
 red = #d32f2f
 primary = #1976d2
+primary-underline = #1e88e5
 secondary = #e60053
 alert = #bd2c40
 
@@ -25,7 +26,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 3
 line-color = #f00
 
 border-size = 1
@@ -113,12 +114,13 @@ format-disconnected =
 type = internal/date
 interval = 5
 
+date = %b %d
 time = %H:%M
 
 format-prefix = " " 
 format-prefix-foreground = ${colors.foreground}
 
-label = %time% 
+label = %date%, %time% 
 
 [module/volume]
 type = internal/volume
