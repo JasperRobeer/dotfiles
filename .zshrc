@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jasper/.oh-my-zsh
 
-ZSH_THEME="ys"
+ZSH_THEME="pure-minimal"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh

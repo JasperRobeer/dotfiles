@@ -155,5 +155,5 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id feh --bg-scale $HOME/Pictures/torrid.png
+exec --no-startup-id feh --bg-scale $HOME/Pictures/himalayas.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
