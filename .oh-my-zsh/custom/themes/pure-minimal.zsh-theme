@@ -4,6 +4,8 @@
 # The theme is inspired by 'sindresorhus/pure'.
 # The theme depends on a Nerd Font: github.com/ryanoasis/nerd-fonts
 
+PURE_PROMPT_CHAR="❯"
+
 ## Prompt components
 
 # Single colored element in the prompt
@@ -31,8 +33,8 @@ prompt_git() {
 }
 
 # Prompt character colored based on the last status
-prompt_status() {
-  [[ $RETVAL -ne 0 ]] && prompt_element default " " && prompt_element red "$RETVAL "
+prompt_status_char() {
+  [[ $RETVAL -ne 0 ]] && prompt_element red $PURE_PROMPT_CHAR || prompt_element default $PURE_PROMPT_CHAR
 }
 
 prompt_newline() {
@@ -45,9 +47,8 @@ build_prompt() {
   prompt_newline
   prompt_dir
   prompt_git
-  prompt_status
   prompt_newline
-  prompt_element default "❯"
+  prompt_status_char
 }
 
-PROMPT='%{%f%k%b%}$(build_prompt) '
+PROMPT='%{%f%k%b%}$(build_prompt) %{%f%k%b%}'
