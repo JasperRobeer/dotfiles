@@ -26,9 +26,25 @@ prompt_dir() {
 prompt_git() {
   (( $+commands[git] )) || return
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+    local branch tmp arrows
+
+    # We are in a git repository!
     branch=$(git symbolic-ref HEAD | cut -d'/' -f3)
+
+    # Get the number of unpushed/unpulled commits from upstream
+    tmp=$(git rev-list --left-right --count HEAD...@{u})
+    if [[ $? -eq 0 ]]; then
+      local unpushed unpulled
+      unpushed=$(echo $tmp | cut -f1)
+      unpulled=$(echo $tmp | cut -f2)
+
+      (( unpushed > 0 )) && arrows+="⇡ "
+      (( unpulled > 0 )) && arrows+="⇣ "
+    fi
+
     prompt_element defaut " "
     prompt_element green "$branch "
+    [[ -n $arrows ]] && prompt_element default $arrows
   fi
 }
 
