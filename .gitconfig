@@ -1,0 +1,19 @@
+[user]
+  email = developer@jasperrobeer.com
+  name = Jasper Robeer
+
+[core]
+  editor = vim
+
+[push]
+  default = simple
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[alias]
+  # Nicely formatted single line log
+  hist = log --oneline --format='%C(auto)%h %C(cyan)%<(14)%ar%Creset %s%d %C(green)(%aN)'
+  # Shows the changes since the last pull
+  whatsnew = !git hist --reverse --no-merges @{1}..
