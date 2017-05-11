@@ -15,7 +15,9 @@ dotfiles config --local status.showUntrackedFiles no
 I run urxvt-unicode with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 and a customized prompt.
 
-![Terminal](terminal.png)
+<p align="center">
+  <img src="terminal.png">
+</p>
 
 ## Package Tracking
 
