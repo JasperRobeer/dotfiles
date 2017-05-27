@@ -24,6 +24,7 @@ gimp
 git
 grub
 gvim
+hlint
 htop
 i3blocks
 i3lock
@@ -51,6 +52,7 @@ powertop
 procps-ng
 psmisc
 pulseaudio-alsa
+python-pip
 ranger
 redshift
 reiserfsprogs
@@ -80,6 +82,7 @@ texlive-pstricks
 texlive-publishers
 texlive-science
 tlp
+tree
 ttf-roboto
 udiskie
 ufw
@@ -89,6 +92,7 @@ vlc
 which
 wpa_actiond
 xbindkeys
+xclip
 xf86-video-intel
 xf86-video-vesa
 xfsprogs
@@ -130,4 +134,5 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+zip
 zsh
