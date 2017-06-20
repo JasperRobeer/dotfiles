@@ -12,6 +12,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+Plugin 'chrisbra/unicode.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -115,8 +117,22 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
 
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space      = "\ua0"
+let g:airline_symbols.crypt      = ""
+let g:airline_symbols.linenr     = ""
+let g:airline_symbols.columnr    = ""
+let g:airline_symbols.whitespace = ""
+
 " NERD Tree
 map <F2> :NERDTreeToggle<CR>
 
 " jj => ESC
 imap jj <ESC>
+
+" Ctrl-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = ['line']
