@@ -14,8 +14,6 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chrisbra/unicode.vim'
-Plugin 'rakr/vim-one'
-Plugin 'guns/xterm-color-table.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,8 +67,9 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 set t_Co=256
-colorscheme one
-set background=light
+let g:solarized_termtrans=1
+colorscheme solarized
+set background=dark
 
 " Enable line numbers
 set relativenumber
@@ -113,7 +112,7 @@ set laststatus=2
 
 " vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'one'
+let g:airline_theme = 'solarized'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
