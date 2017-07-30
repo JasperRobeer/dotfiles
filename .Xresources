@@ -2,60 +2,49 @@
 URxvt*font:             xft:Knack Nerd Font:size=12
 URxvt*urlLauncher:      firefox
 
-! Solarized color scheme for the X Window System
-!
-! http://ethanschoonover.com/solarized
-
-
-! Common
-
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
-
-! Light
-
-#define S_base03        #fdf6e3
-#define S_base02        #eee8d5
-#define S_base01        #93a1a1
-#define S_base00        #839496
-#define S_base0         #657b83
-#define S_base1         #586e75
-#define S_base2         #073642
-#define S_base3         #002b36
-
-*background:              S_base03
-*foreground:              S_base0
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
-
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
-
 !! rxvt-unicode interface
 URxvt*borderLess:       false
 URxvt*externalBorder:   0
 URxvt*internalBorder:   0
-URxvt*borderColor:      S_base03
+URxvt*borderColor:      #fafafa
 URxvt*scrollBar:        false
+
+!! Color scheme generated with terminal.sexy, and based on the One Light
+!! color scheme by https://github.com/rakr/vim-one
+
+! special
+*.foreground:   #494b53
+*.background:   #fafafa
+*.cursorColor:  #494b53
+
+! black
+*.color0:       #494b53
+*.color8:       #696c77
+
+! red
+*.color1:       #e45649
+*.color9:       #ca1243
+
+! green
+*.color2:       #50a14f
+*.color10:      #50a14f
+
+! yellow
+*.color3:       #c18401
+*.color11:      #986801
+
+! blue
+*.color4:       #4078f2
+*.color12:      #4078f2
+
+! magenta
+*.color5:       #a626a4
+*.color13:      #a626a4
+
+! cyan
+*.color6:       #0184bc
+*.color14:      #0184bc
+
+! white
+*.color7:       #a0a1a7
+*.color15:      #c2c2c3

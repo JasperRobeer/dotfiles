@@ -14,6 +14,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chrisbra/unicode.vim'
+Plugin 'rakr/vim-one'
+Plugin 'guns/xterm-color-table.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,9 +68,8 @@ set tm=500
 
 " Enable syntax highlighting
 syntax enable
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
+set t_Co=256
+colorscheme one
 set background=light
 
 " Enable line numbers
@@ -93,11 +94,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 2 spaces
-set shiftwidth=2
-set tabstop=2
-
-" However, for Haskell I prefer to use two spaces instead
-
+set shiftwidth=4
+set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
@@ -115,7 +113,7 @@ set laststatus=2
 
 " vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'one'
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
