@@ -12,12 +12,16 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'chrisbra/unicode.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" =============================================================================
+" General settings
 
 set encoding=utf8                   " Use UTF-8 encoding as default
 set history=500                     " Lines of history that vim has to remember
@@ -62,6 +66,8 @@ set wrap                            " Wrap lines
 set colorcolumn=80,120              " Show column rulers
 set laststatus=2                    " Always show the status line
 
+" =============================================================================
+" Plugin settings
 
 " vim-airline
 let g:airline_powerline_fonts = 1
@@ -82,7 +88,5 @@ map <F2> :NERDTreeToggle<CR>
 " jj => ESC
 imap jj <ESC>
 
-" Ctrl-P
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPLastMode'
-let g:ctrlp_extensions = ['line']
+" fzf
+nnoremap <silent> <C-p> :Files<cr>
