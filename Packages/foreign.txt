@@ -1,3 +1,6 @@
+gstreamer0.10-base-plugins
 i3-gaps
 polybar
 pulsemixer
+rstudio-desktop-bin
+workcraft

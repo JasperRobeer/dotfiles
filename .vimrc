@@ -66,8 +66,8 @@ set tm=500
 
 " Enable syntax highlighting
 syntax enable
-set t_Co=256
-let g:solarized_termtrans=1
+"set t_Co=256
+"let g:solarized_termtrans=1
 colorscheme solarized
 set background=dark
 
