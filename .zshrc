@@ -16,3 +16,5 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # Aliases
 alias dotfiles='/usr/bin/git --git-dir=/home/jasper/.dotfiles --work-tree=/home/jasper'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
